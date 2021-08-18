@@ -6,93 +6,227 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-}
 .header{
-    width: 100%;
-    height: 145px;
-}
-.header__navbar{
-    height: 45px;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #9999;
-    line-height: 45px;
+    height: 46px;
+    background: #1c1c1c;
 }
-.header__navbar a{
-    text-decoration: none;
-    padding: 0 8px;
-    color: black;
-    font-weight: 400;
-}
-.header__navbar a:hover{
-    color:rgb(72, 129, 235);
-}
-.header__navbar a i{
-    font-size: 14px;
-}
-
-.header__main{
-    height: 100px;
+.header .left{
+    padding-left: 20px;
     display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    line-height: 100px;
+    align-items: center;
 }
-.header__main-content{
-
-}
-.header__main-content a{
+.header .left a{
     text-decoration: none;
 }
-.header__main-content a img{
-    width: 162px;
-    height: 35px;
-    padding-left: 15px;
-    padding-right: 30px;
-    vertical-align: middle;
+.header .left a i{
+    font-size: 16px;
+    color: #3fd0d4;
 }
-.header__main-content .header-main-content--text {
-    text-decoration: none;
-    padding: 13px 18px;
-    color: black;
-    font-weight: 500;
-    font-size: 18px;
-}
-.header__main-content .header-main-content--text .icon{
-    font-size: 12px;
-    margin-left: 8px;
-}
-.header__main-content .header-main-content--text:hover{
-    color: rgb(72, 129, 235);
-}
-.header__main-search .header__sub{
-    width: 130px;
-    height: 45px;
-    background-color: #f36;
-    border: none;
-    border-radius: 5px;
+.header .left a span{
     color: #fff;
     font-size: 16px;
-    font-weight: 500;
+    padding-right: 15px;
+    padding-left: 5px;
 }
-.header__main-search .header__sub:hover{
-    background-color: #48494b;
+.header .left a:hover span{
+    color: #3fd0d4;
+}
+.header .right {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+.header .right .icon{
+    width: 40%;
+    margin-right: 10px;
+}
+.header .right .icon a{
+    text-decoration: none;
+    color: #fff;
+    padding: 0 5px;
+}
+.header .right .icon i {
+    font-size: 16px;
+}
+.header .right .list{
+    width: 60%;
+    display: flex;
+    height: 100%;
+    position: relative;
+
+}
+.header .right .list div {
+    position: relative;
+    height: inherit;
+    width: 80%;
+}
+.header .right .list span{
+    color: #fff;
+    background: #3abdc1;
+    height: inherit;
+    display: inline-block;
+    text-align: center;
+    line-height: 46px;
+    width: 100%;
     cursor: pointer;
 }
-.header__main-search .header__search{
-    display: inline-block;
-    margin-left: 10px;
+
+.header .right .list div i{
+    position: absolute;
+    right: 16px;
+    top: 14px;
     font-size: 16px;
-    line-height: 44px;
-    text-align: center;
-    width: 45px;
-    height: 45px;
-    border-radius: 5px;
-    background-color: #f5f5f5;
-}
-.header__main-search .header__search:hover{
-    background-color: #48494b;
     color: #fff;
 }
+.header .right .list ul{
+    position: absolute;
+    width: 100%;
+    top: 46px;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+    background: #3abdc1 ;
+}
+.header .right .list li{
+    height: 46px;
+    line-height: 46px;
+    list-style: none;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+.header .right .list div:hover ul{
+    animation: slide .5s linear;
+    visibility: inherit;
+}
+@keyframes slide {
+    from {
+        opacity: 0;
+        height: 0;
+    }
+    to {
+        height: 300px;
+        opacity: 1;
+    }
+}
+.list .account{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 20%;
+    text-align: center;
+    line-height: 46px;
+    background: #3fd0d4;
+}
+.list .account i {
+    font-size: 25px;
+    color: #fff;
+}
+.nav{
+}
+.nav a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 45px;
+    padding-bottom: 20px;
+}
+.nav a img {
+    width: 270px;
+    height: 90px;
+}
+.nav2 div {
+    margin-left: 140px ;
+    margin-right: 140px ;
+}
+.nav2 .list {
+    display: block;
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
+}
+.nav2 .list li {
+    list-style: none;
+    display: inline-block;
+    padding: 15px;
+    position: relative;
+
+}
+.nav2 div a {
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    font-size: 17px;
+    font-weight: 700;
+}
+.nav2 div .list li:nth-child(1) a{
+    color: #3fd0d4;
+}
+.nav2 .list .listUl{
+    width: 100px;
+    margin: 0;
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    background: red;
+}
+.nav2 .list .listUl::after{
+    clear: both;
+}
+.nav2 .list li:hover .listUl{
+    visibility: inherit;
+    opacity: 1;
+    overflow: visible;
+    animation: slide .5s linear;
+
+}
+.nav2 .list .listUl ul {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    columns: 1;
+    left: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.nav2 .list .listUl ul li {
+    padding: 5px 10px;
+}
+.nav2 div a:hover{
+    color: #3fd0d4;
+}
+.nav2 a span{
+    position: absolute;
+    display: block;
+    background: #3fd0d4;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: inherit;
+    height: 2px;
+    transform: scaleX(100%);
+    transform-origin: right;
+    transition: transform .5s;
+    visibility: hidden;
+}
+.nav2 a:hover span{
+    animation: slides .5s linear;
+    visibility: inherit;
+}
+@keyframes slides {
+    from {
+        opacity: 0;
+        width: 0;
+    }
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
