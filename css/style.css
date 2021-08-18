@@ -168,36 +168,6 @@
 .nav2 div .list li:nth-child(1) a{
     color: #3fd0d4;
 }
-.nav2 .list .listUl{
-    width: 100px;
-    margin: 0;
-    visibility: hidden;
-    opacity: 0;
-    overflow: hidden;
-    background: red;
-}
-.nav2 .list .listUl::after{
-    clear: both;
-}
-.nav2 .list li:hover .listUl{
-    visibility: inherit;
-    opacity: 1;
-    overflow: visible;
-    animation: slide .5s linear;
-
-}
-.nav2 .list .listUl ul {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    columns: 1;
-    left: 0;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.nav2 .list .listUl ul li {
-    padding: 5px 10px;
-}
 .nav2 div a:hover{
     color: #3fd0d4;
 }
